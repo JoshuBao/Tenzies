@@ -9,6 +9,7 @@ export default function App() {
  
   const [dice,setDice] = React.useState(allNewDice())
   const [tenzies,setTenzies] = React.useState(false)
+  const [rollCount,setRollCount] = React.useState(0)
   /**
  * Challenge: Check the dice array for these winning conditions:
  * 1. All dice are held, and
@@ -42,6 +43,7 @@ export default function App() {
   }
   function rollDice(){
     if (!tenzies){
+      setRollCount(prevRollCount => prevRollCount + 1)
       setDice(prevDice => prevDice.map(die => {
         return(
           die.isHeld ?  
@@ -53,6 +55,7 @@ export default function App() {
     else{
       setTenzies(false)
       setDice(allNewDice())
+      setRollCount(0)
     }
   }
   function holdDice(id){
@@ -75,6 +78,8 @@ export default function App() {
       <div className="dice-container">
         {diceElements}
       </div>
+      
+      <h3 className="rollCount">Number of Rolls: {rollCount}</h3>
       <button className="roll-dice"onClick={rollDice}>{tenzies? "New Game" : "Roll"}</button>
       
     </main>

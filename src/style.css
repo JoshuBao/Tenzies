@@ -21,6 +21,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  
   cursor: pointer;
 }
 .title {
@@ -57,20 +58,24 @@ main {
 .roll-dice{
   width: 150px;
   height: 40px;
-  /* margin-top: 25px; */
   border:none;
   border-radius: 5px;
   background: #5035FF;
   box-shadow: 0px 3.2px 10px rgba(0, 0, 0, 0.18);
-  
   font-size: 20px;
   font-family: 'Karla', sans-serif;
   color: white;
   cursor: pointer;
+ 
+  
 }
 .roll-dice:focus{
   outline:none;
 }
 .roll-dice:active{
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.rollCount{
+  align-self: flex-start;
 }
