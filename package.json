@@ -1,8 +1,8 @@
 {
   "name": "tenzies",
+  "homepage": "https://{joshubao}.github.io/Tenzies",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://{JoshuBao}.github.io",
   "dependencies": {
     "-": "^0.0.1",
     "@testing-library/jest-dom": "^5.16.4",
